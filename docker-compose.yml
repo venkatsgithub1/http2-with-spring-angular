@@ -1,0 +1,11 @@
+version: '3'
+services:
+  sbh2:
+    build: .
+    container_name: sb-be-build
+  fengh2:
+    ports:
+      - 8443:443
+      - 8080:80
+    build: ./ui-code/angular-app/
+    container_name: angular-nginx-fe-build
